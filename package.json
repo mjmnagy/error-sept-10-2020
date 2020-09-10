@@ -1,0 +1,64 @@
+{
+  "name": "components",
+  "version": "1.2.20",
+  "private": true,
+  "main": "dist/comps.ssr.js",
+  "browser": "dist/comps.esm.js",
+  "module": "dist/comps.esm.js",
+  "unpkg": "dist/comps.min.js",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "prod": "vue-cli-service build --report --target lib --name sc pkge/index.js",
+    "rollup": "cross-env NODE_ENV=production rollup --config ./rollup.config.js",
+    "rollup:inline": "cross-env NODE_ENV=production rollup --config ./rollup.config.js --inlineDynamicImports",
+    "rollup:ssr": "cross-env NODE_ENV=production rollup --config ./rollup.config.js --format cjs",
+    "rollup:es": "cross-env NODE_ENV=production rollup --config ./rollup.config.js --format es",
+    "rollup:unpkg": "cross-env NODE_ENV=production rollup --config ./rollup.config.js --format iife",
+    "lint": "vue-cli-service lint",
+    "start": "nuxt start"
+  },
+ 
+  "keywords": [
+    "components"
+  ],
+  "author": "FSU Media",
+  "license": "SEE LICENSE IN license.txt",
+  "homepage": "https://bitbucket.org/fsumedia/squadset-components#readme",
+  "devDependencies": {
+    "@nuxtjs/pwa": "^3.0.2",
+    "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-replace": "^2.3.3",
+    "@vue/cli-plugin-babel": "^4.5.4",
+    "@vue/cli-service": "^4.5.4",
+    "@vue/compiler-sfc": "^3.0.0-rc.10",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.6.0",
+    "html-loader": "^0.5.5",
+    "node-sass": "^4.14.1",
+    "nuxt": "^2.14.4",
+    "rollup": "^2.26.11",
+    "rollup-plugin-analyzer": "^3.3.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-includepaths": "^0.2.4",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-vue": "^5.1.9",
+    "sass-loader": "^8.0.2",
+    "typescript": "^4.0.2",
+    "vue": "^2.6.12",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "dependencies": {
+ 
+  }
+}
